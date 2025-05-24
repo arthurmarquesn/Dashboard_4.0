@@ -1,0 +1,145 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            width: 98%;
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr; /* Navbar fixa + conteúdo fluido */
+            grid-template-rows: auto 1fr auto; /* Cabeçalho, conteúdo, rodapé */
+            min-height: 100vh;
+            gap: 10px;
+            grid-template-areas: 
+            "st_bomba litros"
+             "disp litros";
+            
+        }
+
+        .navbar {
+            grid-row: 1 / 4; /* Ocupa todas as linhas */
+            background-color: #2c3e50;
+            padding: 20px;
+            top: 0;
+            z-index: 100; /* Fica acima do conteúdo */
+            height: 100%; /* Altura total da tela */
+        }
+
+        .navbar img{
+            width: 150px;
+            height: 100px;
+            display: block;
+            
+            margin: 0 auto 20px; /* Centraliza a imagem e adiciona margem inferior */
+        }
+
+        .navbar p{
+            color: #ecf0f1;
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: center; /* Centraliza o texto */
+        }
+        .navbar a {
+            display: block;
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #3498db;
+            border-radius: 30px ;
+            border: white;
+        }
+
+        .header {
+            margin-left: 300px;
+            background-color: #ecf0f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-column: 2 / 3;
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Exatamente 2 colunas */
+            gap: 5px;
+              
+        }
+
+        
+
+        .footer {
+            grid-column: 2 / 3;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            
+        }
+
+            
+        
+
+        .intro_info {
+            display: flex;
+            transform: translateX(30px);
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            }
+
+        .intro_info p{
+                width: 600px;
+            }
+
+        .btn_sair{
+            margin: 100px;
+            background-color: red;
+            color: white;
+            width: 100px;
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .btn_sair:hover{
+            color: red;
+            background-color: white;
+            transition: 0.5s;
+            border: 1px solid red;
+            
+        }
+        p{
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        .info p{
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .content-item {
+             background-color: #3498db;
+            color: white;
+           
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            height: 200px;
+            width: 400px;
+        }
+        .content-item:hover{
+            transform: translateY(-10px);
+            transition: 0.5s;
+            border: 2px solid #3498db;
+            background-color: white;
+            color: #2c3e50;
+        }
